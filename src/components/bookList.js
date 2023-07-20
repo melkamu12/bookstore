@@ -1,15 +1,25 @@
-import propTypes from 'prop-types';
+import React from 'react';
+import PropTypes from 'prop-types'; // Import the propTypes module
+import Book from './Book';
 
-const BookList = ({ Title, author }) => (
+const BookList = ({ books }) => (
   <div>
-    <li>
-      <h2>{Title}</h2>
-      <p>{author}</p>
-    </li>
+    {books.map((book) => (
+      <Book key={book.id} book={book} />
+    ))}
   </div>
 );
+
+// Add PropTypes validation for the 'books' prop
 BookList.propTypes = {
-  Title: propTypes.string.isRequired,
-  author: propTypes.string.isRequired,
+  books: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      title: PropTypes.string.isRequired,
+      author: PropTypes.string.isRequired,
+      // Add more book details here and their respective PropTypes
+    }),
+  ).isRequired,
 };
+
 export default BookList;
