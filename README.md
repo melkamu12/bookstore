@@ -1,12 +1,132 @@
-# Getting Started with Create React App
+<a name="readme-top"></a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center">
 
-## Available Scripts
+  <h3> 🗺️ <b>Bookstore</b> 🗺️</h3>
 
-In the project directory, you can run:
+</div>
+<div >
+# 📗 Table of Contents
 
-### `npm start`
+- [📖 About the Project](#about-project)
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
+- [💻 Getting Started](#getting-started)
+  - [Setup](#setup)
+  - [Prerequisites](#prerequisites)
+  - [Install](#install)
+  - [Usage](#usage)
+  - [Run tests](#run-tests)
+- [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
+- [🙏 Acknowledgements](#acknowledgements)
+- [📝 License](#license)
+
+<!-- PROJECT DESCRIPTION -->
+
+# 📖 [Bookstore] <a name="about-project"></a>
+
+> In this project, the Bookstore project aimed to learn and master React js and Redux. By utilizing React js and Redux, the project aimed to build A bookStore that able to render the book and add books from/in the API.
+
+**[Bookstore]**
+
+## 🛠 Built With <a name="built-with"></a>
+
+### Tech Stack <a name="tech-stack"></a>
+
+> HTML, CSS and javaScript
+
+### Key Features
+
+- use gitflow branching strategies 
+- setup react js
+- use react router
+
+
+## 💻 Getting Started <a name="getting-started"></a>
+
+To get a local copy up and running, follow these steps.
+
+### Prerequisites
+
+In order to run this project you need:
+-Vscode
+
+- npm
+- Node.js
+- Terminal
+- Code editor
+- Linters files
+- Flexbox
+- React js
+
+Example command:
+
+```sh
+  npx stylelint "**/*.{css,scss}"
+```
+
+### Setup
+
+Clone this repository to your desired folder:
+
+Example commands:
+
+```sh
+  cd my-folder
+  git clone https://github.com/melkamu12/bookstore.git
+```
+
+### Install
+
+Install this project with:
+
+Example command:
+
+```sh
+ - npm install --save-dev stylelint@13.x stylelint-scss@3.x stylelint-config-standard@21.x stylelint-csstree-validator@1.x
+ - npm install --save-dev eslint@7.x eslint-config-airbnb@18.x eslint-plugin-import@2.x eslint-plugin-jsx-a11y@6.x eslint-plugin-react@7.x eslint-plugin-react-hooks@4.x @babel/eslint-parser@7.x @babel/core@7.x  @babel/plugin-syntax-jsx@7.x  @babel/preset-react@7.x @babel/preset-react@7.x
+```
+
+### Usage
+
+To run the project, execute the following command:
+
+> Example command:
+
+```sh
+  npm init -y
+```
+
+> <p> Open terminal on the same directory of project </p>
+> <p> write "npm start"</p>
+> <p> open http://localhost:3000/ in browser </p>
+
+### Run tests
+
+To run tests, run the following command:
+
+- Track HTML linter errors run:
+`
+npx hint .
+`
+- Track CSS linter errors run:
+`
+npx stylelint "**/*.{css,scss}"
+`
+- Track JavaScript linter errors run:
+`
+npx eslint .
+`
+- Install all dependencies
+```npm install```
+
+
+### development
+ #### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
@@ -14,12 +134,12 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
+#### `npm test`
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+#### `npm run build`
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -29,7 +149,7 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+#### `npm run eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
@@ -39,32 +159,46 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<!-- AUTHORS -->
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 👥 Authors <a name="authors"></a>
 
-### Code Splitting
+👤 **Melkamu Alemawu**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- GitHub: [@melkamu12](https://github.com/melkamu12)
+- LinkedIn: [melkamu-almawu](https://www.linkedin.com/in/melkamu-almawu/)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Making a Progressive Web App
+## Future Features
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- [ ] **[Adding hooks]**
 
-### Advanced Configuration
+## 🤝 Contributing <a name="contributing"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Contributions, issues, and feature requests are welcome!
 
-### Deployment
+Feel free to check the [issues page](git@github.com:melkamu12/bookstore.git).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### `npm run build` fails to minify
+## ⭐️ Show your support <a name="support"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+If you like this project clone on your project working space
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGEMENTS -->
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+- I would like to express my gratitude to microverse for the training.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./LICENSE) licensed.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
