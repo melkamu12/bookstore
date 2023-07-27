@@ -1,0 +1,46 @@
+.nav {
+  height: 3rem;
+  margin: 0 0 2.375rem;
+  background-color: whitesmoke;
+  justify-content: space-between;
+}
+
+.Bookstore-CMS {
+  width: 15rem;
+  height: 2.313rem;
+  margin: 0.375rem 2.938rem 0.125rem 0;
+  font-size: 1.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #0290ff;
+}
+
+.nav-container {
+  display: flex;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #121212;
+}
+
+.nav-container li {
+  margin: 1.125rem 2.5rem 0.688rem 0;
+  font-size: 0.9rem;
+  letter-spacing: 1.9px;
+}
+
+.Mask {
+  margin-top: 1rem;
+  padding-top: 1.25rem;
+  height: 21px;
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
+  color: #0290ff;
+  border: 1px solid rgb(213, 204, 204);
+  border-radius: 15em;
+}

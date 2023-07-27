@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types'; // Import the propTypes module
+import PropTypes from 'prop-types';
 import Book from './Book';
 
 const BookList = ({ books }) => (
@@ -10,14 +10,18 @@ const BookList = ({ books }) => (
   </div>
 );
 
-// Add PropTypes validation for the 'books' prop
 BookList.propTypes = {
   books: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
       title: PropTypes.string.isRequired,
       author: PropTypes.string.isRequired,
-      // Add more book details here and their respective PropTypes
+      itemLayer: PropTypes.string.isRequired,
+      filldata: PropTypes.string.isRequired,
+      percentage: PropTypes.string.isRequired,
+      chapter: PropTypes.string.isRequired,
+      circle: PropTypes.string.isRequired,
+      genres: PropTypes.string.isRequired,
     }),
   ).isRequired,
 };
