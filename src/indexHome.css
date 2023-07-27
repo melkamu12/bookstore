@@ -1,0 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Aleo:wght@500&family=Dancing+Script:wght@400;500;600;700&family=Montserrat:wght@200;400&family=Roboto+Slab&display=swap');
+
+body {
+  border-radius: 4px;
+  background-color: hsl(0, 4%, 91%);
+}
