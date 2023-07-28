@@ -63,15 +63,22 @@
 }
 
 .up-bar {
-  margin-top: 1.4rem;
+  margin-top: 0.5rem;
   margin-right: 1rem;
   font-size: 17px;
   color: #c9baba;
 }
 
+.up-bar-one {
+  align-self: center;
+  font-size: 100px;
+  color: #c9baba;
+  opacity: 0.3;
+}
+
 .stat-section {
   display: flex;
-  margin-top: 2.5rem;
+  margin-top: 2rem;
 }
 
 .circle-container {

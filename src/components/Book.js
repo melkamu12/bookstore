@@ -58,7 +58,7 @@ const Book = ({
           <span className="complete">Completed</span>
         </div>
       </div>
-
+      <span className="up-bar-one">|</span>
       <div className="update-section">
         <span className="current-chapter">CURRENT CHAPTER</span>
         <span className="current-lesson">Chapter 17</span>
