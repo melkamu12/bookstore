@@ -1,38 +1,42 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import Book from './Book';
-import { addBook, removeBook } from '../redux/books/booksSlice';
 import BookForm from './bookForm';
+import Book from './Book';
+import { fetchBooks } from '../redux/books/booksSlice';
 
-const Bookstate = () => {
+export default function Books() {
   const dispatch = useDispatch();
-  const books = useSelector((state) => state.books.books);
-  const handleAddBook = (title, author) => {
-    const newBook = {
-      itemId: `item${books.length + 1}`,
-      title,
-      author,
-    };
-    dispatch(addBook(newBook));
-  };
-  const handleRemoveBook = (itemId) => {
-    dispatch(removeBook(itemId));
-  };
+  const { books, isLoading, error } = useSelector((state) => state.books);
+
+  useEffect(() => {
+    dispatch(fetchBooks());
+  }, [dispatch]);
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return (
+      <div>
+        There is an issue:
+        {error}
+      </div>
+    );
+  }
 
   return (
     <div className="bookcard-container">
-      {books.map((book) => (
+      {Object.entries(books).map(([itemId, book]) => (
         <Book
-          key={book.itemId}
-          title={book.title}
-          author={book.author}
-          category={book.category}
-          onRemove={() => handleRemoveBook(book.itemId)}
+          key={itemId}
+          category={book[0].category}
+          title={book[0].title}
+          author={book[0].author}
+          itemid={itemId}
         />
       ))}
-      <BookForm onAddBook={handleAddBook} />
+      <BookForm />
     </div>
   );
-};
-
-export default Bookstate;
+}
