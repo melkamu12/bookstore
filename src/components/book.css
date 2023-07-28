@@ -22,14 +22,20 @@
 
 .Book-Card {
   display: flex;
-  background-color: hsl(0, 0%, 100%); /* Card background color */
-  padding: 20px; /* Padding inside the card */
-  border-radius: 8px; /* Rounded corners for the card */
+  background-color: hsl(0, 0%, 100%);
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 1rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: left !important;
 }
 
 .bookcard-container {
   margin: 2.375rem 5% 0.938rem 5%;
+}
+
+.book {
+  padding-left: 0;
 }
 
 .title-section {

@@ -4,6 +4,8 @@ import BookForm from './bookForm';
 import Book from './Book';
 import { fetchBooks } from '../redux/books/booksSlice';
 
+import './Bookstate.css';
+
 export default function Books() {
   const dispatch = useDispatch();
   const { books, isLoading, error } = useSelector((state) => state.books);
@@ -36,6 +38,7 @@ export default function Books() {
           itemid={itemId}
         />
       ))}
+      <hr className="shadow" />
       <BookForm />
     </div>
   );

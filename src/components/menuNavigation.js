@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import UserProfile from './UserProfile';
 import './navmenu.css';
 
 const NavigationLink = () => (
@@ -15,6 +15,8 @@ const NavigationLink = () => (
           <Link to="/categories">Categories</Link>
         </li>
       </ul>
+
+      <UserProfile />
     </nav>
   </header>
 );

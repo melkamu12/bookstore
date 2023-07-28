@@ -1,8 +1,11 @@
 .nav {
+  display: flex;
   height: 3rem;
-  margin: 0 0 2.375rem;
+  margin: 0;
   background-color: whitesmoke;
   justify-content: space-between;
+  padding-left: 0;
+  width: 100%;
 }
 
 .Bookstore-CMS {
@@ -16,11 +19,13 @@
   line-height: normal;
   letter-spacing: normal;
   color: #0290ff;
+  left: 0;
 }
 
 .nav-container {
   display: flex;
   list-style: none;
+  width: 65%;
 }
 
 a {
@@ -34,13 +39,6 @@ a {
   letter-spacing: 1.9px;
 }
 
-.Mask {
-  margin-top: 1rem;
-  padding-top: 1.25rem;
-  height: 21px;
-  padding-left: 0.7rem;
-  padding-right: 0.7rem;
-  color: #0290ff;
-  border: 1px solid rgb(213, 204, 204);
-  border-radius: 15em;
+.user-icon {
+  right: 0;
 }

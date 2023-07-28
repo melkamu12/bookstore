@@ -186,3 +186,10 @@
   color: white;
   background-color: #0290ff;
 }
+
+.shadow {
+  width: 75rem;
+  height: 0.125rem;
+  margin: 1.5rem 0.063rem 1.813rem 0;
+  border: solid 2px var(--white-three);
+}
