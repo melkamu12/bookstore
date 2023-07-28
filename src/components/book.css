@@ -22,14 +22,20 @@
 
 .Book-Card {
   display: flex;
-  background-color: hsl(0, 0%, 100%); /* Card background color */
-  padding: 20px; /* Padding inside the card */
-  border-radius: 8px; /* Rounded corners for the card */
+  background-color: hsl(0, 0%, 100%);
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 1rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: left !important;
 }
 
 .bookcard-container {
   margin: 2.375rem 5% 0.938rem 5%;
+}
+
+.book {
+  padding-left: 0;
 }
 
 .title-section {
@@ -57,15 +63,22 @@
 }
 
 .up-bar {
-  margin-top: 1.4rem;
+  margin-top: 0.5rem;
   margin-right: 1rem;
   font-size: 17px;
   color: #c9baba;
 }
 
+.up-bar-one {
+  align-self: center;
+  font-size: 100px;
+  color: #afa7a8;
+  opacity: 0.3;
+}
+
 .stat-section {
   display: flex;
-  margin-top: 2.5rem;
+  margin-top: 2rem;
 }
 
 .circle-container {
