@@ -1,29 +1,37 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addBook } from '../redux/books/booksSlice';
+import { fetchBooks, AddBookAPI } from '../redux/books/booksSlice';
+
 import './bookForm.css';
 
 const BookForm = () => {
   const dispatch = useDispatch();
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
+  const [pending, setPending] = useState('Add Book');
 
-  const handleAddBook = () => {
-    const ItemId = `item${Math.random().toString(36).substr(2, 9)}`;
-
-    dispatch(
-      addBook({
-        item_id: ItemId,
-        title,
-        author,
-        category: 'Fiction',
-      }),
-    );
-
-    setTitle('');
-    setAuthor('');
+  const AuthorHandler = (e) => {
+    setAuthor(e.target.value);
   };
 
+  function titleHandler(e) {
+    setTitle(e.target.value);
+  }
+  function postDispatcher() {
+    const ItemId = `item${Math.random().toString(36).substr(2, 9)}`;
+    const bookDetail = {
+      item_id: ItemId,
+      title,
+      author,
+      category: 'Fiction',
+    };
+    setPending('...Adding');
+    dispatch(AddBookAPI(bookDetail));
+    setTimeout(() => {
+      dispatch(fetchBooks());
+      setPending('Add Book');
+    }, 1000);
+  }
   return (
     <div className="FormAdd">
       <span className="formTitle">ADD NEW BOOK</span>
@@ -34,8 +42,9 @@ const BookForm = () => {
           name="Book-title"
           id="bookTitle"
           placeholder="book Title"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
+          onChange={(e) => {
+            titleHandler(e);
+          }}
         />
         <input
           className="author-inp"
@@ -43,17 +52,20 @@ const BookForm = () => {
           name="Book-Author"
           id="bookAuthor"
           placeholder="book author"
-          value={author}
-          onChange={(e) => setAuthor(e.target.value)}
+          onChange={(e) => {
+            AuthorHandler(e);
+          }}
         />
         <button
           className="submit-btn"
           type="button"
           name="Add-Book"
           id="AddBook"
-          onClick={handleAddBook}
+          onClick={() => {
+            postDispatcher();
+          }}
         >
-          Add Book
+          {pending}
         </button>
       </form>
     </div>
