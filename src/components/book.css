@@ -9,6 +9,17 @@
   color: #4386bf;
 }
 
+.remove-btn {
+  margin: 1.4rem 1rem 2rem 0;
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: #4386bf;
+  border-radius: 0;
+  box-shadow: none;
+  border: 0 white;
+  background-color: white;
+}
+
 .Book-Card {
   display: flex;
   background-color: hsl(0, 0%, 100%); /* Card background color */

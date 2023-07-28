@@ -1,30 +1,32 @@
 import React from 'react';
-import PropTypes from 'prop-types'; // Import the propTypes module
-
+import PropTypes from 'prop-types';
+import Button from './Button';
 import './book.css';
 
-const Book = ({ book }) => (
+const Book = ({
+  title, author, category, onRemove,
+}) => (
   <div className="Book-Card">
     <div className="book">
-      <p className="genres">{book.genres}</p>
-      <h2>{book.title}</h2>
+      <p className="genres">{category}</p>
+      <h2>{title}</h2>
       <p>
         Author:
-        {book.author}
+        {author}
       </p>
       <div className="comRemEdit">
         <p className="comment-btn">Comments</p>
         <span className="up-bar">|</span>
-        <p className="remove-btn">Remove</p>
+        <Button classN="remove-btn" label="Remove" onClick={onRemove} />
         <span className="up-bar">|</span>
         <p className="edit-btn">Edit</p>
       </div>
     </div>
     <div className="stat-section">
       <div className="circle-container">
-        <div className={book.circle}>
-          <div className={book.itemLayer}>
-            <div className={book.filldata} />
+        <div className="circle">
+          <div className="item layer-1">
+            <div className="fill" />
           </div>
           <div className="item layer-2">
             <div className="fill" />
@@ -33,14 +35,14 @@ const Book = ({ book }) => (
         </div>
       </div>
       <div className="percent-complete">
-        <span className="percent">{book.percentage}</span>
+        <span className="percent">0%</span>
         <span className="complete">Completed</span>
       </div>
     </div>
 
     <div className="update-section">
       <span className="current-chapter">CURRENT CHAPTER</span>
-      <span className="current-lesson">{book.chapter}</span>
+      <span className="current-lesson">Chapter 17</span>
       <button type="button" className="update-progress">
         UPDATE PROGRESS
       </button>
@@ -49,16 +51,10 @@ const Book = ({ book }) => (
 );
 
 Book.propTypes = {
-  book: PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    author: PropTypes.string.isRequired,
-    itemLayer: PropTypes.string.isRequired,
-    filldata: PropTypes.string.isRequired,
-    percentage: PropTypes.string.isRequired,
-    chapter: PropTypes.string.isRequired,
-    circle: PropTypes.string.isRequired,
-    genres: PropTypes.string.isRequired,
-  }).isRequired,
+  title: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
+  onRemove: PropTypes.string.isRequired,
 };
 
 export default Book;

@@ -1,50 +1,36 @@
 import React from 'react';
-import BookList from './bookList';
-import BookForm from './addForm';
-
-import './Bookstate.css';
+import { useDispatch, useSelector } from 'react-redux';
+import Book from './Book';
+import { addBook, removeBook } from '../redux/books/booksSlice';
+import BookForm from './bookForm';
 
 const Bookstate = () => {
-  const books = [
-    {
-      id: 1,
-      genres: 'Action',
-      title: 'Book Title 1',
-      author: 'Author1',
-      circle: 'circle',
-      itemLayer: 'item layer-1',
-      filldata: 'fill',
-      percentage: '64%',
-      chapter: 'Chapter 17',
-    },
-    {
-      id: 2,
-      genres: 'Science',
-      title: 'Book Title 2',
-      author: 'Author2',
-      circle: 'circle',
-      itemLayer: 'item layer-1',
-      filldata: 'fill',
-      percentage: '64%',
-      chapter: 'Chapter 17',
-    },
-    {
-      id: 3,
-      genres: 'Economy',
-      title: 'Book Title 3',
-      author: 'Author3',
-      circle: 'circle',
-      itemLayer: 'item layer-1',
-      filldata: 'fill',
-      percentage: '64%',
-      chapter: 'Chapter 17',
-    },
-  ];
+  const dispatch = useDispatch();
+  const books = useSelector((state) => state.books.books);
+  const handleAddBook = (title, author) => {
+    const newBook = {
+      itemId: `item${books.length + 1}`,
+      title,
+      author,
+    };
+    dispatch(addBook(newBook));
+  };
+  const handleRemoveBook = (itemId) => {
+    dispatch(removeBook(itemId));
+  };
 
   return (
     <div className="bookcard-container">
-      <BookList books={books} />
-      <BookForm />
+      {books.map((book) => (
+        <Book
+          key={book.itemId}
+          title={book.title}
+          author={book.author}
+          category={book.category}
+          onRemove={() => handleRemoveBook(book.itemId)}
+        />
+      ))}
+      <BookForm onAddBook={handleAddBook} />
     </div>
   );
 };
